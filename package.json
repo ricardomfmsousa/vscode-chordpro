@@ -1,0 +1,25 @@
+{
+    "name": "chordpro",
+    "displayName": "ChordPro",
+    "description": "Provides ChordPro support for Visual Studio Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "chordpro",
+            "aliases": ["ChordPro", "chordpro"],
+            "extensions": [".cho",".crd",".chopro",".chord",".pro",".chordpro"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "chordpro",
+            "scopeName": "text.chordpro",
+            "path": "./syntaxes/chordpro.tmLanguage.json"
+        }]
+    }
+}
