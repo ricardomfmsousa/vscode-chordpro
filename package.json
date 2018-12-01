@@ -1,25 +1,57 @@
 {
-    "name": "chordpro",
-    "displayName": "ChordPro",
-    "description": "Provides ChordPro support for Visual Studio Code",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.29.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "chordpro",
+  "displayName": "ChordPro",
+  "publisher": "ricardomfmsousa",
+  "description": "Provides ChordPro support for Visual Studio Code",
+  "author": {
+    "name": "Ricardo Marques de Sousa"
+  },
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "license": "MIT",
+  "icon": "images/chordpro.png",
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Snippets",
+    "Formatters"
+  ],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricardomfmsousa/vscode-chordpro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ricardomfmsousa/vscode-chordpro/issues"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "chordpro",
+        "aliases": [
+          "ChordPro",
+          "chordpro",
+          "chord"
+        ],
+        "extensions": [
+          ".cho",
+          ".crd",
+          ".chord",
+          ".chopro",
+          ".chordpro",
+          ".pro"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "chordpro",
-            "aliases": ["ChordPro", "chordpro"],
-            "extensions": [".cho",".crd",".chopro",".chord",".pro",".chordpro"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "chordpro",
-            "scopeName": "text.chordpro",
-            "path": "./syntaxes/chordpro.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "chordpro",
+        "scopeName": "text.chordpro",
+        "path": "./syntaxes/chordpro.tmLanguage.json"
+      }
+    ]
+  }
 }
