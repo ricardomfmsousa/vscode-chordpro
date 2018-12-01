@@ -1,32 +1,115 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "ChordPro",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.chordpro",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.chordpro",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.chordpro",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "text.chordpro"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ChordPro",
+  "patterns": [
+    {
+      "include": "#preamble-directives"
+    },
+    {
+      "include": "#meta-data-directives"
+    },
+    {
+      "include": "#formatting-directives"
+    },
+    {
+      "include": "#environment-directives"
+    },
+    {
+      "include": "#chord-diagrams"
+    },
+    {
+      "include": "#fonts-sizes-colours"
+    },
+    {
+      "include": "#output-related-directives"
+    }
+  ],
+  "repository": {
+    "preamble-directives": {
+      "patterns": [
+        {
+          "name": "comment",
+          "match": "#.*"
+        },
+        {
+          "name": "keyword",
+          "match": "{(new_song|ns)([^{}]*)}"
+        }
+      ]
+    },
+    "meta-data-directives": {
+      "patterns": [
+        {
+          "name": "string.regexp",
+          "match": "{(title|t|subtitle|st|artist|composer|lyricist|copyright|album|year|key|time|tempo|duration|capo|meta)(:[^{}]*)}"
+        }
+      ]
+    },
+    "formatting-directives": {
+      "patterns": [
+        {
+          "name": "markup.italic",
+          "match": "{(comment|c|comment_italic|ci|comment_box|cb|highlight|image)(:[^{}]*)}"
+        }
+      ]
+    },
+    "environment-directives": {
+      "patterns": [
+        {
+          "name": "variable",
+          "match": "{((start_of_chorus|soc|chorus)(:([^{}]*))?|end_of_chorus|eoc)}"
+        },
+        {
+          "name": "constant.regexp",
+          "match": "{((start_of_verse)(:([^{}]*))?|end_of_verse)}"
+        },
+        {
+          "name": "entity.name.function",
+          "match": "{((start_of_tab|sot)(:([^{}]*))?|end_of_tab|eot)}"
+        },
+        {
+          "name": "entity.name.function",
+          "match": "{((start_of_grid)((:|\\s)([^{}]*))?|end_of_grid)}"
+        }
+      ]
+    },
+    "chord-diagrams": {
+      "patterns": [
+        {
+          "name": "markup.inserted",
+          "match": "\\[.*?\\]"
+        },
+        {
+          "name": "string.regexp",
+          "match": "((E|e|B|b|G|g|D|d|A|a){1}\\||\\|{1,2})"
+        },
+        {
+          "name": "markup.inserted",
+          "match": "{(define|chord)(:([^{}]*))?}"
+        }
+      ]
+    },
+    "fonts-sizes-colours": {
+      "patterns": [
+        {
+          "name": "markup.bold",
+          "match": "{(textfont|textsize|textcolour|chordcolour|tabcolour|tabsize)(:([^{}]*))?}"
+        }
+      ]
+    },
+    "output-related-directives": {
+      "patterns": [
+        {
+          "name": "keyword",
+          "match": "{(new_page|np|new_physical_page|npp|column_break|cb|grid|g|no_grid|ng)([^{}]*)}"
+        },
+
+        {
+          "name": "keyword",
+          "match": "{(columns|col)(:([^{}]*))?}"
+        }
+      ]
+    }
+  },
+  "scopeName": "text.chordpro"
 }
