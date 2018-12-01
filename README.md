@@ -1,65 +1,62 @@
-# chordpro README
+# Visual Studio Code ChordPro Extension
 
-This is the README for your extension "chordpro". After writing up a brief description, we recommend including the following sections.
+This extension provides ChordPro files support for VS Code.
+
+> [ChordPro](https://www.chordpro.org/) (also known as Chord) is an ASCII
+> text file format for transcribing songs with chords and lyrics.  
+> Although this format is legible as it is, there are many popular programs for
+> displaying, transposing and printing.  
+> Files in this format often have extensions such as `.crd`, `.chopro`, `.pro`,
+> `.chordpro` or `.cho`. [[wiki](https://en.wikipedia.org/wiki/ChordPro)]
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- [x] Full syntax highlighting
+- [ ] Full syntax snippets
+- [ ] Rendering preview window
+- [ ] Export to PDF songbook
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![Animation](images/extension.gif)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+None in this version.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+None in this version.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+None.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+This is the first release of VS Code ChordPro extension.  
+With it comes syntax highlighting support for one of the best song lyrics and
+chords format.
 
-### 1.0.0
+Future releases will have, at some point in time, improvements in the
+highlighting (add coloring by groups), and what's listed on the check list, in
+the [Features](#Features) section.
 
-Initial release of ...
+To check the latest changes, read the [CHANGELOG.md](CHANGELOG.md).
 
-### 1.0.1
+## Contributing
 
-Fixed issue #.
+All contributions are more than welcome! If you want to get started with a PR,
+please do the following:  
+_(3rd, 4th and 5th step are not required yet)_
 
-### 1.1.0
+1. Check out the [VS Code Extension Docs](https://code.visualstudio.com/docs/extensions/overview), especially [Running and Debugging Extensions](https://code.visualstudio.com/docs/extensions/debugging-extensions).
+1. Fork this repo.
+1. ~~Install dependencies with `npm install`. You'll also need to install dependencies in the `client` and `server` directories.~~
+1. ~~Run `npm run watch` in a shell to get the Typescript compiler running.~~
+1. ~~Run `npm run watch:client` to compile the client and `npm run watch:server` to compile the server. You'll need all three running to do development on the extension.~~
+1. Open the repo directory in VS Code.
+1. Make a code change and test it. You can use the Debug tab and the `Launch Extension` configuration to help.
+1. Create a branch and submit a PR!
 
-Added features X, Y, and Z.
+## License
 
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the [MIT License](LICENSE.txt).
