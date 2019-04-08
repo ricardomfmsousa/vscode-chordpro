@@ -52,6 +52,17 @@
         "scopeName": "text.chordpro",
         "path": "./syntaxes/chordpro.tmLanguage.json"
       }
+    ],
+    "configurationDefaults": {
+      "[chordpro]": {
+        "editor.wordBasedSuggestions": false
+      }
+    },
+    "snippets": [
+      {
+        "language": "chordpro",
+        "path": "./snippets/chordpro.json"
+      }
     ]
   }
 }
