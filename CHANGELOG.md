@@ -12,6 +12,13 @@
 
 - _to be defined_
 
+## 0.2.0 - 2018-04-10
+
+### Added
+
+- Partial syntax snippets
+- Disable word based suggestions
+
 ## 0.1.0 - 2018-12-02
 
 ### Added
@@ -23,4 +30,5 @@
 - Readme
 - License
 
-[unreleased]: https://github.com/ricardomfmsousa/vscode-chordpro/compare/0.1.0...HEAD
+[unreleased]: https://github.com/ricardomfmsousa/vscode-chordpro/compare/0.2.0...HEAD
+[0.2.0]: https://github.com/ricardomfmsousa/vscode-chordpro/compare/0.1.0...0.2.0
