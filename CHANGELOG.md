@@ -12,10 +12,11 @@
 
 - _to be defined_
 
-## 0.2.0 - 2018-04-10
+## [0.2.0] - 2018-04-10
 
 ### Added
 
+- Release scripts
 - Partial syntax snippets
 - Disable word based suggestions
 
