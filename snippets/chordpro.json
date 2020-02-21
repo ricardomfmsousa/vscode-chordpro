@@ -30,5 +30,131 @@
         "body": [
             "[$1]$0"
         ]
+    },
+    "bridge": {
+        "prefix": "bridge",
+        "body": "{start_of_bridge}\n$SELECTION$0{end_of_bridge}\n",
+        "description": "ChordPro: bridge tag",
+        "scope": "text.chordpro"
+    },
+    "br": {
+        "prefix": "br",
+        "body": "{sob}\n$SELECTION$0{eob}\n",
+        "description": "ChordPro: abbr. bridge tag",
+        "scope": "text.chordpro"
+    },
+    "chord": {
+        "prefix": "chord",
+        "body": "[$SELECTION$0]",
+        "description": "ChordPro: chord brackets",
+        "scope": "text.chordpro"
+    },
+    "c": {
+        "prefix": "c",
+        "body": "{comment: $SELECTION$0}\n",
+        "description": "ChordPro: comment tag",
+        "scope": "text.chordpro"
+    },
+    "cpos": {
+        "prefix": "cpos",
+        "body": "{+pdf.diagrams.show: $SELECTION$0}\n",
+        "description": "ChordPro: chord diagrams (top|bottom|right)",
+        "scope": "text.chordpro"
+    },    
+    "def": {
+        "prefix": "def",
+        "body": "{define: ${1:name} base-fret ${2:offset} frets ${4:s1},${5:s2},${6:s3},${7:s4},${8:s5},${9:s6}}\n",
+        "description": "insert ChordPro chord definition tag",
+        "scope": "text.chordpro"
+    },
+    "ins": {
+        "prefix": "ins",
+        "body": "{instrument: $SELECTION$0}\n",
+        "description": "insert ChordPro instrument tag",
+        "scope": "text.chordpro"
+    },
+    "ukedef": {
+        "prefix": "ukedef",
+        "body": "{define: ${1:name} base-fret ${2:offset} frets ${4:s1},${5:s2},${6:s3},${7:s4}}\n",
+        "description": "insert ChordPro Uke chord definition tag",
+        "scope": "text.chordpro"
+    },
+    "subtitle": {
+        "prefix": "subtitle",
+        "body": "{subtitle: $SELECTION$0 }\n",
+        "description": "ChordPro: subtitle tags",
+        "scope": "text.chordpro"
+    },
+    "st": {
+        "prefix": "st",
+        "body": "{st: $SELECTION$0 }\n",
+        "description": "ChordPro: abbr. subtitle tags",
+        "scope": "text.chordpro"
+    },
+    "np": {
+        "prefix": "np",
+        "body": "{np}\n",
+        "description": "ChordPro: new page",
+        "scope": "text.chordpro"
+    },
+    "newsong": {
+        "prefix": "newsong",
+        "body": "{new_song}\n",
+        "description": "ChordPro: new song",
+        "scope": "text.chordpro"
+    },
+    "staff": {
+        "prefix": "staff",
+        "body": "E |----------------|----------------|----------------|----------------|\nB |----------------|----------------|----------------|----------------|\nG |----------------|----------------|----------------|----------------|\nD |----------------|----------------|----------------|----------------|\nA |----------------|----------------|----------------|----------------|\nE |----------------|----------------|----------------|----------------|\n",
+        "description": "ChordPro: insert 4bar staff",
+        "scope": "text.chordpro"
+    },
+    "tab": {
+        "prefix": "tab",
+        "body": "{start_of_tab}\n$SELECTION$0{end_of_tab}\n",
+        "description": "ChordPro: start/end tabs tags",
+        "scope": "text.chordpro"
+    },
+    "ci": {
+        "prefix": "ci",
+        "body": "{comment-italic: $SELECTION$0}\n",
+        "description": "ChordPro: comment_italic tag",
+        "scope": "text.chordpro"
+    },
+    "title": {
+        "prefix": "title",
+        "body": "{title: $SELECTION$0}\n",
+        "description": "ChordPro: title tags",
+        "scope": "text.chordpro"
+    },
+    "t": {
+        "prefix": "t",
+        "body": "{t: $SELECTION$0}\n",
+        "description": "ChordPro: abbr. title tags",
+        "scope": "text.chordpro"
+    },
+    "chorus": {
+        "prefix": "chorus",
+        "body": "{start_of_chorus}\n$SELECTION$0{end_of_chorus}\n",
+        "description": "ChordPro: chorus tag",
+        "scope": "text.chordpro"
+    },
+    "ch": {
+        "prefix": "chorus",
+        "body": "{soc}\n$SELECTION$0{eoc}\n",
+        "description": "ChordPro: abbr. chorus tag",
+        "scope": "text.chordpro"
+    },
+    "transpose": {
+        "prefix": "transpose",
+        "body": "{transpose: $SELECTION$0}\n",
+        "description": "ChordPro: transpose tag",
+        "scope": "text.chordpro"
+    },
+    "key": {
+        "prefix": "key",
+        "body": "{key: $SELECTION$0}\n",
+        "description": "ChordPro: key tag",
+        "scope": "text.chordpro"
     }
 }
