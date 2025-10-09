@@ -6,15 +6,19 @@
   "author": {
     "name": "Ricardo Marques de Sousa"
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "release:major": "scripts/./release.sh major",
     "release:minor": "scripts/./release.sh minor",
     "release:patch": "scripts/./release.sh patch"
   },
+  "main": "./extension.js",
   "engines": {
     "vscode": "^1.29.0"
   },
+  "activationEvents": [
+    "onCommand:chordpro.exportToPdf"
+  ],
   "license": "MIT",
   "icon": "images/chordpro.png",
   "categories": [
@@ -67,6 +71,12 @@
       {
         "language": "chordpro",
         "path": "./snippets/chordpro.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "chordpro.exportToPdf",
+        "title": "Export ChordPro to PDF"
       }
     ]
   }

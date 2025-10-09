@@ -3,24 +3,35 @@
 This extension provides ChordPro files support for VS Code.
 
 > [ChordPro](https://www.chordpro.org/) (also known as Chord) is an ASCII
-> text file format for transcribing songs with chords and lyrics.  
+> text file format for transcribing songs with chords and lyrics.
 > Although this format is legible as it is, there are many popular programs for
-> displaying, transposing and printing.  
+> displaying, transposing and printing.
 > Files in this format often have extensions such as `.crd`, `.chopro`, `.pro`,
 > `.chordpro` or `.cho`. [[wiki](https://en.wikipedia.org/wiki/ChordPro)]
 
 ## Features
 
 - [x] Full syntax highlighting
+- [x] Export to PDF (via ChordPro command-line tool)
 - [ ] Full syntax snippets
 - [ ] Rendering preview window
-- [ ] Export to PDF songbook
 
 ![Animation](images/extension.gif)
 
+### Export to PDF
+
+You can export any ChordPro file (`.cho`, `.crd`, `.chord`, `.chopro`, `.chordpro`, `.pro`) to PDF format:
+
+1. Open a ChordPro file in VS Code
+2. Press `Cmd+Shift+P` (or `Ctrl+Shift+P` on Windows/Linux)
+3. Type and select **"Export ChordPro to PDF"**
+4. The PDF will be generated in the same directory and automatically opened with your system's default PDF viewer
+
+**Note:** This feature requires the [ChordPro command-line tool](https://www.chordpro.org/chordpro/chordpro-installation/) to be installed on your system.
+
 ## Requirements
 
-None in this version.
+- **For PDF Export**: [ChordPro](https://www.chordpro.org/chordpro/chordpro-installation/) command-line tool must be installed and available in your system PATH.
 
 ## Extension Settings
 
@@ -32,7 +43,7 @@ None.
 
 ## Release Notes
 
-This is the first release of VS Code ChordPro extension.  
+This is the first release of VS Code ChordPro extension.
 With it comes syntax highlighting support for one of the best song lyrics and
 chords format.
 
@@ -45,7 +56,7 @@ To check the latest changes, read the [CHANGELOG.md](CHANGELOG.md).
 ## Contributing
 
 All contributions are more than welcome! If you want to get started with a PR,
-please do the following:  
+please do the following:
 _(3rd, 4th and 5th steps are not required yet)_
 
 1. Check out the
@@ -60,7 +71,7 @@ _(3rd, 4th and 5th steps are not required yet)_
    to compile the server. You'll need all three running to do development on the
    extension.~~
 1. Open the repo directory in VS Code.
-1. Make a code change and test it.  
+1. Make a code change and test it.
    _You can use the Debug tab and the `Launch Extension` configuration to help._
 1. Update the [CHANGELOG.md](CHANGELOG.md).
 1. Create a branch and submit a PR!
