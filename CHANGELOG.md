@@ -8,9 +8,19 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-02-12
+
 ### Added
 
-- _to be defined_
+- **Live Preview**: View your ChordPro songs rendered as HTML in real-time.
+- **PDF Export**: Export your songs to PDF format directly from VS Code.
+- **Enhanced Snippets**: Added over 20 new snippets, including `bridge`, `staff`, `transpose`, and selection wrapping support.
+- **Project Modernization**: Updated dependencies and configuration for better stability.
+
+### Fixed
+
+- **Release Script**: Fixed bugs in `release.sh` and improved error handling.
+- **Configuration**: Fixed deprecated settings and updated `.gitignore`.
 
 ## [0.2.0] - 2018-04-10
 

@@ -126,7 +126,6 @@
 
 # This directive indicates that the lines that follow define a chord grid in the
 # style of Jazz Grilles.
-{start_of_grid cells } {start_of_grid measures x beats }
 {start_of_grid: Intro}
 {start_of_grid}
 || Am . . . | C . . . | D  . . . | F  . . . |
