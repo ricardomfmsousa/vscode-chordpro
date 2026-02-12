@@ -12,9 +12,44 @@ This extension provides ChordPro files support for VS Code.
 ## Features
 
 - [x] Full syntax highlighting
-- [ ] Full syntax snippets
+- [x] Comprehensive syntax snippets (28+)
 - [ ] Rendering preview window
 - [ ] Export to PDF songbook
+
+## Snippets
+
+This extension includes a large collection of snippets to speed up your songwriting. Many snippets support **selection wrapping** (select text and type the snippet prefix to wrap it).
+
+### Headers & Metadata
+
+| Feature      | Prefix(es)       | Result                  |
+| ------------ | ---------------- | ----------------------- |
+| Title        | `title`, `t`     | `{title: ...}`          |
+| Subtitle     | `subtitle`, `st` | `{subtitle: ...}`       |
+| Basic Header | `header`         | Title and Key block     |
+| Full Header  | `fullheader`     | Complete metadata block |
+
+### Sections
+
+| Feature | Prefix(es)             | Result                                  |
+| ------- | ---------------------- | --------------------------------------- |
+| Chorus  | `cdef`, `chorus`, `ch` | `{start_of_chorus} ... {end_of_chorus}` |
+| Verse   | `vdef`, `vlabel`       | `{start_of_verse} ... {end_of_verse}`   |
+| Bridge  | `bridge`, `br`         | `{start_of_bridge} ... {end_of_bridge}` |
+| Tab     | `tab`                  | `{start_of_tab} ... {end_of_tab}`       |
+
+### Formatting & Musical Notation
+
+| Feature        | Prefix(es)      | Result                       |
+| -------------- | --------------- | ---------------------------- |
+| Inline Chord   | `chord`         | `[...]`                      |
+| Comment        | `comment`, `c`  | `{comment: ...}`             |
+| Italic Comment | `ci`            | `{comment_italic: ...}`      |
+| Staff          | `staff`         | 4-bar musical staff template |
+| Define         | `def`, `ukedef` | Custom chord diagrams        |
+
+> [!TIP]
+> Type `chordpro` in the snippet search to see all available options!
 
 ![Animation](images/extension.gif)
 

@@ -1,34 +1,201 @@
 {
-    "Header": {
-        "prefix": "header",
-        "body": [
-           "{title: $1}",
-           "{key: $2}",
-           "$0"
-        ]
-    },
-    "Chorus": {
-        "prefix": "cdef",
-        "body": [
-            "{start_of_chorus}",
-            "$0",
-            "{end_of_chorus}"
-
-        ]
-    },
-    "Verse": {
-        "prefix": "vdef",
-        "body": [
-            "{start_of_verse}",
-            "$0",
-            "{end_of_verse}"
-
-        ]
-    },
-    "Chord": {
-        "prefix": "chord",
-        "body": [
-            "[$1]$0"
-        ]
-    }
+  "Header": {
+    "prefix": "header",
+    "body": ["{title: ${1:$SELECTION}}", "{key: $2}", "$0"],
+    "description": "Basic song header with title and key"
+  },
+  "Full Header": {
+    "prefix": "fullheader",
+    "body": [
+      "{title: ${1:$SELECTION}}",
+      "{subtitle: $2}",
+      "{artist: $3}",
+      "{key: $4}",
+      "{tempo: $5}",
+      "{time: $6}",
+      "$0"
+    ],
+    "description": "Complete song header with all metadata"
+  },
+  "Chorus": {
+    "prefix": ["cdef", "chorus"],
+    "body": ["{start_of_chorus}", "${0:$SELECTION}", "{end_of_chorus}"],
+    "description": "Chorus section"
+  },
+  "Chorus (Shorthand)": {
+    "prefix": "ch",
+    "body": ["{soc}", "${0:$SELECTION}", "{eoc}"],
+    "description": "Chorus section (shorthand)"
+  },
+  "Chorus with Label": {
+    "prefix": "clabel",
+    "body": [
+      "{start_of_chorus: ${1:Label}}",
+      "${0:$SELECTION}",
+      "{end_of_chorus}"
+    ],
+    "description": "Chorus section with custom label"
+  },
+  "Verse": {
+    "prefix": "vdef",
+    "body": ["{start_of_verse}", "${0:$SELECTION}", "{end_of_verse}"],
+    "description": "Verse section"
+  },
+  "Verse with Label": {
+    "prefix": "vlabel",
+    "body": [
+      "{start_of_verse: ${1:Label}}",
+      "${0:$SELECTION}",
+      "{end_of_verse}"
+    ],
+    "description": "Verse section with custom label"
+  },
+  "Bridge": {
+    "prefix": "bridge",
+    "body": ["{start_of_bridge}", "${0:$SELECTION}", "{end_of_bridge}"],
+    "description": "Bridge section"
+  },
+  "Bridge (Shorthand)": {
+    "prefix": "br",
+    "body": ["{sob}", "${0:$SELECTION}", "{eob}"],
+    "description": "Bridge section (shorthand)"
+  },
+  "Tab Section": {
+    "prefix": "tab",
+    "body": ["{start_of_tab}", "${0:$SELECTION}", "{end_of_tab}"],
+    "description": "Tablature section"
+  },
+  "Grid Section": {
+    "prefix": "grid",
+    "body": ["{start_of_grid}", "${0:$SELECTION}", "{end_of_grid}"],
+    "description": "Chord grid section"
+  },
+  "Chord": {
+    "prefix": "chord",
+    "body": ["[${1:$SELECTION}]$0"],
+    "description": "Inline chord"
+  },
+  "Comment": {
+    "prefix": ["comment", "c"],
+    "body": ["{comment: ${1:$SELECTION}}"],
+    "description": "Comment directive"
+  },
+  "Comment Italic": {
+    "prefix": ["ci", "commentitalic"],
+    "body": ["{comment_italic: ${1:$SELECTION}}"],
+    "description": "Italic comment"
+  },
+  "Comment Box": {
+    "prefix": "cb",
+    "body": ["{comment_box: ${1:$SELECTION}}"],
+    "description": "Boxed comment"
+  },
+  "Title": {
+    "prefix": ["title", "t"],
+    "body": ["{title: ${1:$SELECTION}}"],
+    "description": "Song title"
+  },
+  "Subtitle": {
+    "prefix": ["subtitle", "st"],
+    "body": ["{subtitle: ${1:$SELECTION}}"],
+    "description": "Song subtitle"
+  },
+  "Artist": {
+    "prefix": "artist",
+    "body": ["{artist: ${1:$SELECTION}}"],
+    "description": "Artist name"
+  },
+  "Composer": {
+    "prefix": "composer",
+    "body": ["{composer: ${1:$SELECTION}}"],
+    "description": "Composer name"
+  },
+  "Key": {
+    "prefix": "key",
+    "body": ["{key: ${1:$SELECTION}}"],
+    "description": "Song key"
+  },
+  "Capo": {
+    "prefix": "capo",
+    "body": ["{capo: $1}"],
+    "description": "Capo position"
+  },
+  "Tempo": {
+    "prefix": "tempo",
+    "body": ["{tempo: $1}"],
+    "description": "Song tempo"
+  },
+  "Time Signature": {
+    "prefix": "time",
+    "body": ["{time: $1}"],
+    "description": "Time signature"
+  },
+  "Instrument": {
+    "prefix": "ins",
+    "body": ["{instrument: ${1:$SELECTION}}"],
+    "description": "Instrument specification"
+  },
+  "Transpose": {
+    "prefix": "transpose",
+    "body": ["{transpose: ${1:0}}"],
+    "description": "Transpose chords"
+  },
+  "New Song": {
+    "prefix": "newsong",
+    "body": ["{new_song}", "$0"],
+    "description": "Start a new song"
+  },
+  "New Page": {
+    "prefix": ["newpage", "np"],
+    "body": ["{new_page}"],
+    "description": "Page break"
+  },
+  "Column Break": {
+    "prefix": "colbreak",
+    "body": ["{column_break}"],
+    "description": "Column break"
+  },
+  "Define Chord": {
+    "prefix": ["define", "def"],
+    "body": ["{define: ${1:Name} base-fret ${2:1} frets ${3:0,0,0,0,0,0}}"],
+    "description": "Define custom guitar chord diagram"
+  },
+  "Define Uke Chord": {
+    "prefix": "ukedef",
+    "body": ["{define: ${1:Name} base-fret ${2:1} frets ${3:0,0,0,0}}"],
+    "description": "Define custom ukelele chord diagram"
+  },
+  "PDF Diagrams Display": {
+    "prefix": "cpos",
+    "body": ["{+pdf.diagrams.show: ${1|top,bottom,right,none|}}"],
+    "description": "PDF rendering: chord diagrams position"
+  },
+  "Musical Staff": {
+    "prefix": "staff",
+    "body": [
+      "E |----------------|----------------|----------------|----------------|",
+      "B |----------------|----------------|----------------|----------------|",
+      "G |----------------|----------------|----------------|----------------|",
+      "D |----------------|----------------|----------------|----------------|",
+      "A |----------------|----------------|----------------|----------------|",
+      "E |----------------|----------------|----------------|----------------|",
+      "$0"
+    ],
+    "description": "Insert a 4-bar musical staff template"
+  },
+  "Copyright": {
+    "prefix": "copyright",
+    "body": ["{copyright: ${1:$SELECTION}}"],
+    "description": "Copyright information"
+  },
+  "Album": {
+    "prefix": "album",
+    "body": ["{album: ${1:$SELECTION}}"],
+    "description": "Album name"
+  },
+  "Year": {
+    "prefix": "year",
+    "body": ["{year: $1}"],
+    "description": "Release year"
+  }
 }
