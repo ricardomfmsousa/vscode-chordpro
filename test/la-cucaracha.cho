@@ -1,0 +1,44 @@
+{title: La Cucaracha}
+{subtitle: Traditional Mexican Folk Song (Public Domain)}
+{artist: Traditional}
+{composer: Traditional}
+{key: G}
+{time: 4/4}
+{tempo: 120}
+{capo: 0}
+
+{comment: This is a traditional public-domain version. 
+Many regional variants exist; this one is historically attested.}
+
+{comment: Suggested strumming pattern}
+{comment: | D D U U D U |}
+
+{define: G  base-fret 1 frets 3 2 0 0 0 3}
+{define: D7 base-fret 1 frets x x 0 2 1 2}
+{define: C  base-fret 1 frets x 3 2 0 1 0}
+
+{start_of_chorus}
+[G]La cucaracha, [D7]la cucaracha
+[G]Ya no puede [D7]caminar
+[G]Porque no tiene, [C]porque le falta
+[G]Una patita [D7]para andar
+{end_of_chorus}
+
+{comment: Optional instrumental break}
+{comment: | G | D7 | G | D7 | G | C | G D7 | G |}
+
+{start_of_verse}
+[G]The little cockroach, [D7]the little cockroach
+[G]Now she cannot [D7]walk at all
+[G]Because she doesn’t, [C]because she lacks
+[G]A little leg to [D7]help her [G]crawl
+{end_of_verse}
+
+{start_of_verse}
+[G]Some say the roach was [D7]very clever
+[G]Dancing through the [D7]dusty street
+[G]But when she lost her [C]tiny leg
+[G]She couldn’t keep up [D7]with the [G]beat
+{end_of_verse}
+
+{comment: End with a bright G chord}
