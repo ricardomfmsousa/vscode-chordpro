@@ -12,9 +12,44 @@ This extension provides ChordPro files support for VS Code.
 ## Features
 
 - [x] Full syntax highlighting
-- [ ] Full syntax snippets
-- [ ] Rendering preview window
-- [ ] Export to PDF songbook
+- [x] Comprehensive syntax snippets (28+)
+- [x] Rendering preview window
+- [x] Export to PDF songbook
+
+## Snippets
+
+This extension includes a large collection of snippets to speed up your songwriting. Many snippets support **selection wrapping** (select text and type the snippet prefix to wrap it).
+
+### Headers & Metadata
+
+| Feature      | Prefix(es)       | Result                  |
+| ------------ | ---------------- | ----------------------- |
+| Title        | `title`, `t`     | `{title: ...}`          |
+| Subtitle     | `subtitle`, `st` | `{subtitle: ...}`       |
+| Basic Header | `header`         | Title and Key block     |
+| Full Header  | `fullheader`     | Complete metadata block |
+
+### Sections
+
+| Feature | Prefix(es)             | Result                                  |
+| ------- | ---------------------- | --------------------------------------- |
+| Chorus  | `cdef`, `chorus`, `ch` | `{start_of_chorus} ... {end_of_chorus}` |
+| Verse   | `vdef`, `vlabel`       | `{start_of_verse} ... {end_of_verse}`   |
+| Bridge  | `bridge`, `br`         | `{start_of_bridge} ... {end_of_bridge}` |
+| Tab     | `tab`                  | `{start_of_tab} ... {end_of_tab}`       |
+
+### Formatting & Musical Notation
+
+| Feature        | Prefix(es)      | Result                       |
+| -------------- | --------------- | ---------------------------- |
+| Inline Chord   | `chord`         | `[...]`                      |
+| Comment        | `comment`, `c`  | `{comment: ...}`             |
+| Italic Comment | `ci`            | `{comment_italic: ...}`      |
+| Staff          | `staff`         | 4-bar musical staff template |
+| Define         | `def`, `ukedef` | Custom chord diagrams        |
+
+> [!TIP]
+> Type `chordpro` in the snippet search to see all available options!
 
 ![Animation](images/extension.gif)
 
@@ -45,25 +80,14 @@ To check the latest changes, read the [CHANGELOG.md](CHANGELOG.md).
 ## Contributing
 
 All contributions are more than welcome! If you want to get started with a PR,
-please do the following:  
-_(3rd, 4th and 5th steps are not required yet)_
+please do the following:
 
-1. Check out the
-   [VS Code Extension Docs](https://code.visualstudio.com/docs/extensions/overview),
-   especially
-   [Running and Debugging Extensions](https://code.visualstudio.com/docs/extensions/debugging-extensions).
-1. Fork this repo.
-1. ~~Install dependencies with `npm install`. You'll also need to install
-   dependencies in the `client` and `server` directories.~~
-1. ~~Run `npm run watch` in a shell to get the Typescript compiler running.~~
-1. ~~Run `npm run watch:client` to compile the client and `npm run watch:server`
-   to compile the server. You'll need all three running to do development on the
-   extension.~~
-1. Open the repo directory in VS Code.
-1. Make a code change and test it.  
-   _You can use the Debug tab and the `Launch Extension` configuration to help._
-1. Update the [CHANGELOG.md](CHANGELOG.md).
-1. Create a branch and submit a PR!
+1. Fork and clone this repository.
+2. Run `npm install` to install dependencies.
+3. Open the repository in VS Code.
+4. Press `F5` to launch the Extension Development Host and test your changes.
+5. Update the [CHANGELOG.md](CHANGELOG.md) with details of your changes.
+6. Submit a Pull Request!
 
 ## License
 

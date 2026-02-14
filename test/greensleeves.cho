@@ -1,0 +1,53 @@
+{title: Greensleeves}
+{subtitle: Traditional English Folk Song (Public Domain)}
+{artist: Traditional}
+{composer: Traditional}
+{key: Am}
+{time: 3/4}
+{tempo: 80}
+{capo: 0}
+
+{comment: This is the traditional public-domain version. 
+Many lyrical variants exist; this one is historically attested.}
+
+{comment: Suggested fingerpicking pattern}
+{comment: | 5 - 3 - 2 - 1 - 2 - 3 |}
+
+{define: Am base-fret 1 frets 0 0 2 2 1 0}
+{define: G  base-fret 1 frets 3 2 0 0 0 3}
+{define: C  base-fret 1 frets x 3 2 0 1 0}
+{define: E  base-fret 1 frets 0 2 2 1 0 0}
+{define: F  base-fret 1 frets 1 3 3 2 1 1}
+
+{start_of_verse}
+[Am]Alas, my love, you [G]do me wrong
+[Am]To cast me off dis[E]courteously
+[Am]For I have loved you [G]well and long
+[Am]Delighting [G]in your [Am]company
+{end_of_verse}
+
+{start_of_chorus}
+[Am]Greensleeves was all my [G]joy
+[Am]Greensleeves was my de[E]light
+[Am]Greensleeves was my [G]heart of gold
+[Am]And who but [G]my lady [Am]Greensleeves
+{end_of_chorus}
+
+{comment: Optional instrumental interlude}
+{comment: | Am | G | Am | E | Am | G | Am G | Am |}
+
+{start_of_verse}
+[Am]Your vows you've broken, [G]like my heart
+[Am]Oh, why did you so [E]enchant me
+[Am]Now I remain in [G]worlds apart
+[Am]But still I [G]love you [Am]gently
+{end_of_verse}
+
+{start_of_chorus}
+[Am]Greensleeves was all my [G]joy
+[Am]Greensleeves was my de[E]light
+[Am]Greensleeves was my [G]heart of gold
+[Am]And who but [G]my lady [Am]Greensleeves
+{end_of_chorus}
+
+{comment: End with a slow arpeggio on Am}

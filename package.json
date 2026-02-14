@@ -6,22 +6,32 @@
   "author": {
     "name": "Ricardo Marques de Sousa"
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "main": "./src/extension.js",
   "scripts": {
     "release:major": "scripts/./release.sh major",
     "release:minor": "scripts/./release.sh minor",
-    "release:patch": "scripts/./release.sh patch"
+    "release:patch": "scripts/./release.sh patch",
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "engines": {
-    "vscode": "^1.29.0"
+    "vscode": "^1.75.0"
   },
   "license": "MIT",
   "icon": "images/chordpro.png",
+  "keywords": [
+    "chordpro",
+    "chord",
+    "music",
+    "lyrics",
+    "guitar",
+    "songbook",
+    "tabs"
+  ],
   "categories": [
     "Programming Languages",
-    "Linters",
-    "Snippets",
-    "Formatters"
+    "Snippets"
   ],
   "private": false,
   "repository": {
@@ -31,7 +41,35 @@
   "bugs": {
     "url": "https://github.com/ricardomfmsousa/vscode-chordpro/issues"
   },
+  "homepage": "https://github.com/ricardomfmsousa/vscode-chordpro#readme",
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@vscode/vsce": "^2.22.0"
+  },
   "contributes": {
+    "commands": [
+      {
+        "command": "chordpro.showPreview",
+        "title": "Show Preview",
+        "category": "ChordPro",
+        "icon": "$(open-preview)"
+      },
+      {
+        "command": "chordpro.exportPdf",
+        "title": "Export to PDF",
+        "category": "ChordPro",
+        "icon": "$(file-pdf)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "chordpro.showPreview",
+          "group": "navigation",
+          "when": "resourceLangId == chordpro"
+        }
+      ]
+    },
     "languages": [
       {
         "id": "chordpro",
@@ -60,7 +98,7 @@
     ],
     "configurationDefaults": {
       "[chordpro]": {
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": "off"
       }
     },
     "snippets": [
@@ -69,5 +107,8 @@
         "path": "./snippets/chordpro.json"
       }
     ]
+  },
+  "dependencies": {
+    "chordsheetjs": "^13.2.1"
   }
 }

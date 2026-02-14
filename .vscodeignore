@@ -1,4 +1,12 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+.vscodeignore
 vsc-extension-quickstart.md
+scripts/**
+images/extension.gif
+language-test.cho
+package-lock.json
+CHANGELOG.md
+README.md
+LICENSE.txt
